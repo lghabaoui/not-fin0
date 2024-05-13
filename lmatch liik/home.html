@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lmatch Liik</title>
+    <link rel="stylesheet" href="css/test.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    
+</style>
+<body>
+    <header>
+        <nav>
+            
+            <ul class="nav-links">
+                <a href="#" class="logo"><img src="img/Untitled-1.png"></a>
+                    <div class="dropdown">
+                        <li><a href="home.html">Home</a></li>
+                    </div>
+                    <div class="dropdown">
+                        <li><a href="test2.html">Renting Playgrounds</a></li>
+                        
+                    </div>
+                    <div class="dropdown">
+                        <li><a href="#">Discount</a></li>
+                        <div class="dropdown-content">
+                            <a href="#link1">Add</a>
+                            <a href="#link2">Get</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <li><a href="#">Other Service</a></li>
+                        <div class="dropdown-content">
+                            <a href="#link1">Support</a>
+                            <a href="#link2">Get T-shirt</a>
+                            <a href="#link3" >Settings</a>
+                            
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <li><a href="#">My list</a></li>
+                    </div>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Lmatch Liik</h1>
+        <a href="test2.html" class="btn">Get Started&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+    </section>
+
+    <section class="news">
+        <h2>Latest News</h2>
+        <div class="news-item">
+            <img src="https://cdn-icons-png.flaticon.com/128/2692/2692815.png" alt="" class="news-image">
+            <!-- Additional content for news item 3 -->
+        </div>
+        <div class="news-item">
+            <img src="https://cdn-icons-png.flaticon.com/128/839/839860.png" alt="" class="news-image">
+            <!-- Additional content for news item 3 -->
+        </div>
+        <div class="news-item">
+            <img src="https://cdn-icons-png.flaticon.com/128/1067/1067566.png" alt="" class="news-image">
+            <!-- Additional content for news item 3 -->
+        </div>
+                                
+        </div>
+    </section>
+    
+    
+
+    
+        <div class="scores-container">
+            <!-- Live scores dynamically loaded here -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-info">
+            <p>&copy; 2024 Lmatch liik. All Rights Reserved.</p>
+            <ul>
+                <li><a href="footer/privacy.html">Privacy Policy</a></li>
+                <li><a href="footer/temservice.html">Terms of Service</a></li>
+                <li><a href="footer/us.html">About Us</a></li>
+                <li><a href="footer/contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function(){
+            // Load initial content
+            $('#content').load('home.html');
+
+            // Function to load different pages
+            $('.nav-link').click(function(e){
+                e.preventDefault();
+                var page = $(this).attr('href');
+                $('#content').load(page);
+            });
+        });
+    </script>
+</body>
+
+</html>

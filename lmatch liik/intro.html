@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intro Logo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    .logo {
+      font-family: Arial, sans-serif;
+      font-size: 3rem;
+      color: #333;
+      display: flex;
+    }
+
+    .letter {
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out forwards;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .letter:hover {
+      transform: rotate(360deg);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-80px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <span class="letter">L</span>
+    <span class="letter">M</span>
+    <span class="letter">A</span>
+    <span class="letter">T</span>
+    <span class="letter">C</span>
+    <span class="letter">H</span>
+    <span class="letter">_</span>
+    <span class="letter">L</span>
+    <span class="letter">I</span>
+    <span class="letter">I</span>
+    <span class="letter">K</span>
+  </div>
+  
+
+  <script>
+    const letters = document.querySelectorAll('.letter');
+    letters.forEach((letter, index) => {
+      setTimeout(() => {
+        letter.style.opacity = '1';
+      }, index * 200);
+    });
+
+    setTimeout(() => {
+      window.location.href = "loginpage.html";
+    }, 3000);
+  </script>
+  
+</body>
+</html>

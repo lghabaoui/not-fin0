@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lmatch Liik</title>
+<link rel="stylesheet" href="css/test.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    body {
+        background-color: #3333331e;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+    }
+
+    .nav-links {
+        list-style: none;
+        padding: 0;
+        height: 40px;
+        margin-right: 40px;
+        align-items: center;
+        display: flex;
+    }
+
+    .nav-links li {
+        display: inline;
+        margin-right: 80px;
+    }
+
+    .nav-links li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .nav-links li a:hover {
+        color: greenyellow;
+        transition: .2s;
+    }
+
+    .nav-links li a.active {
+        font-weight: bold;
+    }
+
+    /* Hero section styles */
+    .hero {
+        background-color: #f4f4f4;
+        text-align: center;
+        padding: 50px 0;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .btn:hover {
+        background-color: greenyellow;
+        color: #333;
+        transition: .35s;
+    }
+
+    /* News section styles */
+    .news {
+        padding: 20px;
+    }
+
+    .news-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    /* Scores section styles */
+    .scores {
+        background-color: #f4f4f4;
+        padding: 20px;
+        padding-bottom: 50px;
+    }
+
+    .scores-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    /* Footer styles */
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .footer-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-info ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-info ul li {
+        display: inline;
+        margin-right: 30px;
+    }
+
+    .footer-info ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .footer-info ul li a:hover {
+        color: #8f8f8f;
+    }
+
+    .home {
+        background-size: cover;
+    }
+
+    /* Additional styles for filter */
+    .filter-container {
+        margin: 20px auto;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        width: 80%;
+        max-width: 600px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .filter-container label {
+        margin-right: 10px;
+    }
+
+    .filter-container input {
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        color: #333;
+    }
+
+    .check-button {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .check-button:hover {
+        background-color: greenyellow;
+        color: #333;
+        transition: .35s;
+    }
+
+    /* Styles for the result div */
+    .result-container {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f4f4f4;
+        border-radius: 5px;
+        text-align: center;
+        display: none; /* Initially hide the result container */
+    }
+    
+    /* Additional containers to be shown after filtering */
+    .additional-container {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f4f4f4;
+        border-radius: 5px;
+        display: none; /* Initially hide the additional containers */
+    }
+    .additional-container p{
+        margin-right: 20px;
+        margin-bottom: ;
+    }
+    
+    #container {
+        display: flex;
+        align-items: flex-start; /* Align items to the top */
+    }
+
+    #container img {
+        width: 200px;
+        height: auto;
+        margin-right: 20px;
+    }
+
+    #container h1 {
+        flex: 1; /* Take remaining space */
+    }
+
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <a href="#" class="logo"><img src="img/Untitled-1.png"></a>
+                <div class="dropdown">
+                    <li><a href="home.html">Home</a></li>
+                </div>
+                <div class="dropdown">
+                    <li><a href="">Renting Playgrounds</a></li>
+                    <div class="dropdown-content">
+                        <a href="teran.html">Tanger</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <li><a href="#">Discount</a></li>
+                    <div class="dropdown-content">
+                        <a href="#link1">Add</a>
+                        <a href="#link2">Get</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <li><a href="#">Other Service</a></li>
+                    <div class="dropdown-content">
+                        <a href="#link1">Support</a>
+                        <a href="#link2">Get T-shirt</a>
+                        <a href="#link3">Settings</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <li><a href="#">My list</a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Filter inputs between header and footer -->
+    <div class="filter-container">
+        <label for="date-filter">Date:</label>
+        <input type="date" id="date-filter" required>
+        <label for="time-filter">Time:</label>
+        <input type="time" id="time-filter" required>
+        <button class="check-button">Check</button>
+    </div>
+
+    <!-- Result container -->
+    <div class="result-container">
+        
+    </div>
+    
+    <!-- Additional containers -->
+    <div class="additional-container" id="container1">
+       <img src="https://stadiumconnection.com/simages/4772.jpg" alt="">
+       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam explicabo nisi similique, inventore suscipit accusamus laudantium? Dignissimos dolor mollitia at ipsa impedit nisi, quisquam perspiciatis voluptate ut soluta odio aliquam?</p>
+    </div>
+    <div class="additional-container" id="container2">
+        <img src="https://stadiumconnection.com/simages/4772.jpg" alt="">
+        <p></p>
+    </div>
+    <div class="additional-container" id="container3">
+        <img src="https://stadiumconnection.com/simages/4772.jpg" alt="">
+        <p>545454</p>
+    </div>
+
+    <footer>
+        <div class="footer-info">
+            <p>&copy; 2024 Lmatch liik. All Rights Reserved.</p>
+            <ul>
+                <li><a href="footer/privacy.html">Privacy Policy</a></li>
+                <li><a href="footer/temservice.html">Terms of Service</a></li>
+                <li><a href="footer/us.html">About Us</a></li>
+                <li><a href="footer/contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function () {
+            // Load initial content
+            $('#content').load('home.html');
+
+            // Function to load different pages
+            $('.nav-link').click(function (e) {
+                e.preventDefault();
+                var page = $(this).attr('href');
+                $('#content').load(page);
+            });
+
+            // Add event listener to check button
+            $('.check-button').click(function () {
+                // Get selected values from filters
+                var selectedDate = $('#date-filter').val();
+                var selectedTime = $('#time-filter').val();
+
+                // Perform filtering based on selected values
+                // For demonstration purposes, simply logging the selected values
+                console.log("Selected Date: " + selectedDate);
+                console.log("Selected Time: " + selectedTime);
+                
+                // Your logic for handling filter checks goes here
+                // Example: You can retrieve selected values from the date and time filters and perform filtering actions
+                // Once the filtering is done, you can update the content inside the result container dynamically
+                
+                // Simulate filtered results
+                var filteredResults = "Filtered results:<br>";
+                filteredResults += "Date: " + selectedDate + "<br>";
+                filteredResults += "Time: " + selectedTime + "<br>";
+                $('.result-container').html(filteredResults);
+                
+                // Show the result container
+                $('.result-container').show();
+                
+                // Show the additional containers
+                $('.additional-container').show();
+            });
+        });
+    </script>
+</body>
+</html>

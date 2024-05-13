@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Settings</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+.setting {
+    margin-bottom: 30px;
+}
+
+.setting h2 {
+    margin-bottom: 10px;
+}
+
+.setting-item {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.save-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.save-button:hover {
+    background-color: #45a049;
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Settings</h1>
+    </header>
+    <main>
+        <section class="setting">
+            <h2>Account Settings</h2>
+            <div class="setting-item">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+            </div>
+            <div class="setting-item">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="setting-item">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+            </div>
+        </section>
+        <section class="setting">
+            <h2>Notification Settings</h2>
+            <div class="setting-item">
+                <label for="notifications">Receive Notifications:</label>
+                <input type="checkbox" id="notifications" name="notifications">
+            </div>
+            <div class="setting-item">
+                <label for="frequency">Notification Frequency:</label>
+                <select id="frequency" name="frequency">
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                </select>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <button class="save-button">Save Settings</button>
+    </footer>
+</body>
+</html>
